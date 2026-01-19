@@ -8,7 +8,7 @@ body {
 header {
 
     background-color: azure;
-    color: white;
+    color: black;
     text-align: center;
     padding: 20px;
 }
@@ -27,4 +27,33 @@ h2 {
 
 p {
     line-height: 1.5;
+}
+
+/* Flex container*/
+.container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+@media (max-width:700px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
+.about {
+    writing-mode: horizontal-tb;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
