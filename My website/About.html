@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About | My Website</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index2.html"></a>Home</a>
+        <a href="About.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>About Me 👩‍💻</h1>
+        <h2>Hello! Iam Simran Shaikh, learning web development and building the small projects. I love coding and
+            learning new things.
+            My short term goal is to become the web Developer and long term goal is to become a Data Scientist.
+        </h2>
+        <ul>
+            <h1>Skills</h1>
+            <li>HTML,CSS</li>
+            <LI>Python(Basic)</LI>
+            <li>SQL(intermediate)</li>
+            <li>Excel(Basic)</li>
+            <li>C#</li>
+            <LI>Java(On going learning)</LI>
+
+        </ul>
+
+
+    </main>
+
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+    <script>
+        const navLinks = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute("href").split("/").pop().toLowerCase();
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    </script>
+</body>
+
+
+
+</html>

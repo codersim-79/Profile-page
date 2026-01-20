@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | My Website</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index2.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Contact 📩</h1>
+        <p>Email: sabershaikh4350@gmail.com.com</p>
+        <p>Phone: ############3</p>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/simran-shaikh-4bb590356">My Linkedin Profile</a></p>
+    </main>
+
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+
+
+
+    <script>
+        const navLinks = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute("href").split("/").pop().toLowerCase();
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

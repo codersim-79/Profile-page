@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home | My Website</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index2.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Welcome 👋</h1>
+        <p>This is a simple multi-page website built with HTML & CSS.</p>
+        <img src="./code.jfif" alt="coding image" width="500" height="300">
+        <h2>Hi Welcome to my Web Dev journey🎉</h2>
+        <p>Learning HTML,CSS, & Building the Basic level projects</p>
+        <h1>Visit my all website</h1>
+
+
+
+    </main>
+
+    <footer>
+        <p>Have a Nice Day😊</p>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute("href").split("/").pop().toLowerCase();
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
